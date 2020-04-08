@@ -1,99 +1,66 @@
-# Unit 09 Node.js and ES6+ Homework: Developer Profile Generator
+## PROJECT TITLE
 
-Create a command-line application that dynamically generates a PDF profile from a GitHub username. The application will be invoked with the following command:
+Developer Profile Generator
 
-```sh
-node index.js
-```
+## PROBLEM DESCRIPTION  
+(as defined in a business context)
 
-The user will be prompted for a favorite color, which will be used as the background color for cards.
+### Business Context:
 
-The PDF will be populated with the following:
+When preparing a report for stakeholders, it is important to have up-to-date information about members of the development team. Rather than navigating to each team member's GitHub profile, a command-line application would allow for a quick and easy generation of profiles in PDF format.
 
-* Profile image
-* User name
-* Links to the following:
-  * User location via Google Maps
-  * User GitHub profile
-  * User blog
-* User bio
-* Number of public repositories
-* Number of followers
-* Number of GitHub stars
-* Number of users following
+## USER STORY:
 
-Following the [common templates for user stories](https://en.wikipedia.org/wiki/User_story#Common_templates), we can frame this challenge as follows:
-
-```
 AS A product manager
-
 I WANT a developer profile generator
-
 SO THAT I can easily prepare reports for stakeholders
-```
 
-Refer to the [design mockup](./Assets/09-NodeJS-homework-demo.pdf).
+## USER STORY ACCEPTANCE TEST
 
-## Business Context
-
-When preparing a report for stakeholders, it is important to have up-to-date information about members of the development team. Rather than navigating to each team member's GitHub profile, a command-line application will allow for quick and easy generation of profiles in PDF format.
-
-## Minimum Requirements
-
-* Functional, deployed application.
-
-* GitHub repository with a unique name and a README describing project.
-
-* The application generates a PDF resume from the user provided GitHub profile.
-
-* The generated resume includes a bio image from the user's GitHub profile.
-
-* The generated resume includes the user's location and a link to their GitHub profile.
-
-* The generated resume includes the number of: public repositories, followers, GitHub stars and following count.
-
-* The background color of the generated PDF matches the color that the user provides.
-
-```
 GIVEN the developer has a GitHub profile
-
 WHEN prompted for the developer's GitHub username and favorite color
-
 THEN a PDF profile is generated
-```
-- - -
 
-## Commit Early and Often
+## APPLICATION DESCRIPTION
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+A command-line application that dynamically generates a PDF profile from a GitHub username. 
 
-* Your commit history is a signal to employers that you are actively working on projects and learning new skills.
+### a) OPERATION
 
-* Your commit history allows you to revert your code base in the event that you need to return to a previous state.
+1) From the Terminal/Console, using bash commands, enter node index.js to start the application.
+2) when asked, enter your GitHub username, 
+3) next, select and enter your favourite colour,
+4) from this input information, an html and pdf profile with image of yourself is generated.
 
-Follow these guidelines for committing:
+### b) DEVELOPMENT
 
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
+Given an html.js A command lime application was developed
 
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
 
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
 
-* Test your application before you commit to ensure functionality at every step in the development process.
 
-We would like you to have more than 200 commits by graduation, so commit early and often!
 
-## Submission on BCS
+## LICENSE
 
-You are required to submit the following:
+MIT License
 
-* An animated GIF demonstrating the app functionality
+Copyright (c) 2019 David Brown
 
-* A generated PDF of your GitHub profile
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-* The URL of the GitHub repository
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
-
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 

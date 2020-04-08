@@ -127,7 +127,7 @@ const colors = {
   }
 };
 
-// generate html
+// generate html from given data 
 function generateHTML(info) {
   return `<!DOCTYPE html>
   <html lang="en">
@@ -280,8 +280,7 @@ function generateHTML(info) {
            <div class="photo-header">
               <img src="${info.profilePic}" alt="Photo of ${info.name}" />
               <h1>Hello!</h1>
-              <h2>
-              My name is ${info.name}!</h1>
+              <h1>My name is ${info.name}!</h1>
               <h5>${info.company ? `Currently @ ${info.company}` : ""}</h5>
               <nav class="links-nav">
                  ${

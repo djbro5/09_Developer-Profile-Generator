@@ -59,11 +59,9 @@ promptUser()
           console.log(`${username}.html converted to PDF`);
           readyToConvert = true;
 
-          // test HTML file writes to disk
-          fs.writeFileSync(`${username}.html`, html);
+     
+          fs.writeFileSync(`${username}.html`, html);              // test HTML file writes to disk and HTML to PDF converter
 
-           // HTML to PDF converter
-           // https://www.npmjs.com/package/html-pdf
           var options = { format: 'landscape' };
           pdf.create(html, options).toFile(`${username}.pdf`, function (err, res) {
             if (err) return console.log(err);
@@ -292,7 +290,7 @@ function generateHTML(info) {
       }</a>`
       : ""
     }
-                 <a class="nav-link" target="_blank" rel="noopener noreferrer" href="${
+                 <a class="nav-link" target="_blank" rel="noopener noreferrer" href="${     // need to tidy and comment
     info.profileUrl
     }"><i class="fab fa-github-alt"></i> GitHub</a>
                  ${

@@ -34,11 +34,20 @@ A command-line application that dynamically generates a PDF profile from a GitHu
 
 ### b) DEVELOPMENT
 
-Given an html.js A command lime application was developed
+Technologies used:
+html - web document markup language
+JavaScript  - programming language
+inquirer - interactive command line user interface prompt
+Axios - promise based HTTP client for the browser and node.js
+npm - package manager for the JavaScript
+Node - JavaScript runtime environment
+Google Maps - web mapping service
+JASON -  data-interchange format for storing and exchanging data
+GitHub - Git repository hosting service
 
+ ### c) FURTHER WORK
 
-
-
+Get user location to function.
 
 ## LICENSE
 

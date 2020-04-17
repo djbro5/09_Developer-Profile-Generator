@@ -4,9 +4,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
-        <link href="https://fonts.googleapis.com/css?family=BioRhyme|Cabin&display=swap" rel="stylesheet">
-        <title>HTML Profile</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css
+"/>
+        <link href="https://fonts.googleapis.com/css?family=BioRhyme|Cabin&display=swap" rel
+="stylesheet">
+        <title>Resume</title>
         <style>
             @page {
               margin: 0;
@@ -24,21 +26,22 @@
            height: 100%;
            }
            .wrapper {
-           background-color: white;
+             height: 500px;
+           background-color: #b6c414;
            padding-top: 100px;
            }
            body {
-           background-color: pink;
+           background-color: #ffffff;
            -webkit-print-color-adjust: exact !important;
-           font-family: 'Cabin', sans-serif;
+           font-family: 'segoe UI', sans-serif;
            }
            main {
-           background-color: #E9EDEE;
+           background-color: #ffffff;
            height: auto;
            padding-top: 30px;
            }
            h1, h2, h3, h4, h5, h6 {
-           font-family: 'BioRhyme', serif;
+           font-family: 'segoe UI', serif;
            margin: 0;
            }
            h1 {
@@ -66,19 +69,19 @@
            display: flex;
            justify-content: center;
            flex-wrap: wrap;
-           background-color: #FF8374;
+           background-color: #2778C5;
            color: white;
            padding: 10px;
            width: 95%;
            border-radius: 6px;
            }
            .photo-header img {
-           width: 250px;
-           height: 250px;
+           width: 175px;
+           height: 175px;
            border-radius: 50%;
            object-fit: cover;
            margin-top: -75px;
-           border: 6px solid pink;
+           border: 6px solid #black;
            box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
            }
            .photo-header h1, .photo-header h2 {
@@ -105,11 +108,12 @@
            margin-top: 10px;
            }
            .container {
+             position: relative;
            padding: 50px;
            padding-left: 100px;
            padding-right: 100px;
            }
-  
+
            .row {
              display: flex;
              flex-wrap: wrap;
@@ -117,84 +121,78 @@
              margin-top: 20px;
              margin-bottom: 20px;
            }
-  
+
            .card {
              padding: 20px;
              border-radius: 6px;
-             background-color: #FF8374;
+             background-color: #2778C5;
              color: white;
              margin: 20px;
            }
-           
+
            .col {
            flex: 1;
            text-align: center;
            }
-  
+
            a, a:hover {
            text-decoration: none;
            color: inherit;
            font-weight: bold;
            }
-  
-           @media print { 
-            body { 
-              zoom: .75; 
-            } 
+
+           @media print {
+            body {
+              zoom: .75;
+            }
            }
         </style>
-     </head> 
 
-     <body>
-        <div class="wrapper">
-           <div class="photo-header">
-              <img src="https://avatars2.githubusercontent.com/u/54054754?v=4" alt="Photo of djbro5" />
-              <h1>Hello!</h1>
-              <h1>My name is djbro5!</h1>
-              <h5></h5>
-              <nav class="links-nav">
-                 <a class="nav-link" target="_blank" rel="noopener noreferrer" href="https://github.com/djbro5"><i class="fab fa-github-alt"></i> GitHub</a>
-                                                                                 
-              </nav>
-           </div>
-
-           <main>
-              <div class="container">
-                  <div class="row">
-                    <div class="col">
-                        <h3></h3>
-                    </div>
-                  </div>
-                <div class="row">
-                    <div class="col">
-                      <div class="card">
-                        <h3>Public Repositories</h3>
-                        <h4>15</h4>
-                      </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <h3>Followers</h3>
-                            <h4>5</h4>
-                        </div>
-                    </div>
-                 </div>
-                 <div class="row">
-                    <div class="col">
-                        <div class="card">
-                            <h3>GitHub Stars</h3>
-                            <h4>0</h4>
-                        </div>
-                    </div>
-                    <div class="col">
-                       <div class="card">
-                          <h3>Following</h3>
-                          <h4>0</h4>
-                       </div>
-                     </div>
-                 </div>
+        <body>
+          <header>
+          <div class="wrapper">
+            <div class='photo-header'>
+              <img src="https://avatars1.githubusercontent.com/u/54054754?s=60&u=51385a0e14af21850fea1c11bf4732b1015e0bbf&v=4"><br>
+              <h1>Hi!</h1>
+              <h2>I am David Brown</h2>
+              <h4>Currently enrolled in University of Adelaide Coding Boot Camp</h4>
+              <div class="links-nav">
+                <a class="nav-link" href="https://www.google.com/maps/place/Adelaide"><h5>Adelaide</h5></a>
+                <a class="nav-link" href="https://github.com/djbro5"><h5>GitHub</h5></a>
+                <a class="nav-link" href="https://github.com/djbro5/Portfolio"><h5>Blog</h5></a>
               </div>
-           </main>
-        </div>
-     </body>
-  </html>
+
+            </div>
+          </header>
+
+          <div class="container">
+            <div class="row">
+            <div class="col">
+                <h4>As an Entrepreneur and Engineer, I am learning full stack web design for the purpose of employing the skill in an IoT design project.</h4>
+            </div>
+            </div>
+            <div class="row">
+              <div class='col card'>
+                <h2>Public repositories: </h1>
+                14
+              </div>
+
+              <div class="col card">
+                <h2>Followers:</h1>
+                2
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="card col">
+                <h2>Stars:</h2>
+                2
+              </div>
+              <div class="card col">
+                <h2>Following:</h2>
+                2
+              </div>
+            </div>
+
+          </div>
+  </body>

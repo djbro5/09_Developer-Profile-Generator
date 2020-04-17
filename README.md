@@ -47,7 +47,8 @@ GitHub - Git repository hosting service
 
  ### c) FURTHER WORK
 
-Get user location to function.
+Get app to produce html like testBed.html
+i.e., location, blog
 
 ## LICENSE
 

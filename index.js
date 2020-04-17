@@ -1,10 +1,10 @@
 
 const inquirer = require("inquirer");
 const fs = require("fs");
-const conversion = require("phantom-html-to-pdf")();
+const conversion = require("phantom-html-to-pdf")(); // check why never read
 const axios = require("axios");
 const pdf = require('html-pdf');
-const util = require("util");
+const util = require("util"); // check why never read                                
 
 function promptUser() {
   return inquirer.prompt([{
@@ -25,7 +25,7 @@ promptUser()
     const queryUrl = `https://api.github.com/users/${username}`;
     axios
       .get(queryUrl).then(function (res) {
-        console.log(res);
+        // console.log(res);
         info = {
           color: favColour,
           profilePic: res.data.avatar_url,
@@ -40,10 +40,10 @@ promptUser()
           following: res.data.following,
         }
         
-        console.log(info);
+        // console.log(info);
 
         const newQueryUrl = `https://api.github.com/users/${username}/repos`;
-        console.log(newQueryUrl);
+        // console.log(newQueryUrl);
 
         axios.get(newQueryUrl).then(function (res) {
           let starCount = 0;
@@ -93,11 +93,11 @@ function generatePdf(html) {
       }
       result.stream.pipe(fs.createWriteStream(`${username}.pdf`));
       conversion.kill();
-      console.log(`${username}.pdf is now available in your current directory`);
+      console.log(`${username}.find generated pdf in current directory`);
     });
 }
 
-// colour select 
+// generateHTML
 const colors = {
   green: {
     wrapperBackground: "green",
@@ -125,7 +125,7 @@ const colors = {
   }
 };
 
-// generate html from given data 
+
 function generateHTML(info) {
   return `<!DOCTYPE html>
   <html lang="en">
@@ -273,6 +273,7 @@ function generateHTML(info) {
            }
         </style>
      </head> 
+
      <body>
         <div class="wrapper">
            <div class="photo-header">
@@ -281,61 +282,46 @@ function generateHTML(info) {
               <h1>My name is ${info.name}!</h1>
               <h5>${info.company ? `Currently @ ${info.company}` : ""}</h5>
               <nav class="links-nav">
-                 ${
-    info.location
-      ? `<a class="nav-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/${
-      info.location
-      }"><i class="fas fa-location-arrow"></i> ${
-      info.location
-      }</a>`
-      : ""
-    }
-                 <a class="nav-link" target="_blank" rel="noopener noreferrer" href="${     // need to tidy and comment
-    info.profileUrl
-    }"><i class="fab fa-github-alt"></i> GitHub</a>
-                 ${
-    info.blog
-      ? `<a class="nav-link" target="_blank" rel="noopener noreferrer" href="${
-      info.blog
-      }"><i class="fas fa-rss"></i> Blog</a>`
-      : ""
-    }
+                 ${info.location? `<a class="nav-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/${info.location}"><i class="fas fa-location-arrow"></i> 
+                 ${info.location}</a>` : ""}<a class="nav-link" target="_blank" rel="noopener noreferrer" href="${info.profileUrl}"><i class="fab fa-github-alt"></i> GitHub</a>
+                 ${info.blog? `<a class="nav-link" target="_blank" rel="noopener noreferrer" href="${info.blog}"><i class="fas fa-rss"></i> Blog</a>`: ""}                                                                
               </nav>
            </div>
+
            <main>
               <div class="container">
-              <div class="row">
-                 <div class="col">
-                    <h3>${info.bio ? `${info.bio}` : ""}</h3>
-                 </div>
-                 </div>
-                 <div class="row">
-                 <div class="col">
-                    <div class="card">
-                      <h3>Public Repositories</h3>
-                      <h4>${info.repos}</h4>
+                  <div class="row">
+                    <div class="col">
+                        <h3>${info.bio ? `${info.bio}` : ""}</h3>
                     </div>
-                 </div>
-                  <div class="col">
-                  <div class="card">
-                    <h3>Followers</h3>
-                    <h4>${info.followers}</h4>
                   </div>
-                 </div>
+                <div class="row">
+                    <div class="col">
+                      <div class="card">
+                        <h3>Public Repositories</h3>
+                        <h4>${info.repos}</h4>
+                      </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <h3>Followers</h3>
+                            <h4>${info.followers}</h4>
+                        </div>
+                    </div>
                  </div>
                  <div class="row">
-                 <div class="col">
-                 <div class="card">
-                    <h3>GitHub Stars</h3>
-                    <h4>${info.starCount}</h4>
+                    <div class="col">
+                        <div class="card">
+                            <h3>GitHub Stars</h3>
+                            <h4>${info.starCount}</h4>
+                        </div>
                     </div>
-                 </div>
-                  <div class="col">
-                  <div class="card">
-                    <h3>Following</h3>
-                    <h4>${info.following}</h4>
-                    </div>
-                 </div>
+                    <div class="col">
+                       <div class="card">
+                          <h3>Following</h3>
+                          <h4>${info.following}</h4>
+                       </div>
+                     </div>
                  </div>
               </div>
            </main>

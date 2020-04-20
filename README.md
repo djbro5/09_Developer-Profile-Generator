@@ -23,32 +23,29 @@ THEN a PDF profile is generated
 
 ## APPLICATION DESCRIPTION
 
-A command-line application that dynamically generates a PDF profile from a GitHub username. 
+Developer Profile Generator is a command-line application that dynamically generates a PDF profile from a GitHub username. 
 
 ### a) OPERATION
 
 1) From the Terminal/Console, using bash commands, enter node index.js to start the application.
 2) when asked, enter your GitHub username, 
 3) next, select and enter your favourite colour,
-4) from this input information, an html and pdf profile with image of yourself is generated.
+4) from this input information, an html and generated pdf profile with image of yourself is generated and saved in application folder.
 
 ### b) DEVELOPMENT
 
 Technologies used:
-html - web document markup language
-JavaScript  - programming language
-inquirer - interactive command line user interface prompt
-Axios - promise based HTTP client for the browser and node.js
-npm - package manager for the JavaScript
-Node - JavaScript runtime environment
-Google Maps - web mapping service
-JASON -  data-interchange format for storing and exchanging data
-GitHub - Git repository hosting service
+* html - web document markup language
+* JavaScript  - programming language
+* inquirer - interactive command line user interface prompt
+* Axios - promise based HTTP client for the browser and node.js
+* npm - package manager for the JavaScript
+* Node - JavaScript runtime environment
+* Google Maps - web mapping service
+* JASON -  data-interchange format for storing and exchanging data
+* GitHub - Git repository hosting service
 
- ### c) FURTHER WORK
-
-Get app to produce html like testBed.html
-i.e., location, blog
+ScreenToGif, a record and make GIF/video Chrome extension app was used to record the required animated GIF demonstrating app functionality
 
 ## LICENSE
 

@@ -1,17 +1,16 @@
 
 const inquirer = require("inquirer");
 const fs = require("fs");
-const conversion = require("phantom-html-to-pdf")(); // check why never read
 const axios = require("axios");
-const pdf = require('html-pdf');
-const util = require("util"); // check why never read                                
+const pdf = require('html-pdf');                             
 
 function promptUser() {
   return inquirer.prompt([{
     type: "input",
     message: "Enter your GitHub username:",
     name: "username"
-  }, {
+  }, 
+  {
     type: "list",
     message: "What is your favorite color?",
     name: "favColour",
@@ -25,7 +24,6 @@ promptUser()
     const queryUrl = `https://api.github.com/users/${username}`;
     axios
       .get(queryUrl).then(function (res) {
-        // console.log(res);
         info = {
           color: favColour,
           profilePic: res.data.avatar_url,
@@ -40,11 +38,7 @@ promptUser()
           following: res.data.following,
         }
         
-        // console.log(info);
-
         const newQueryUrl = `https://api.github.com/users/${username}/repos`;
-        // console.log(newQueryUrl);
-
         axios.get(newQueryUrl).then(function (res) {
           let starCount = 0;
           for (let index = 0; index < res.data.length; index++) {
@@ -52,13 +46,10 @@ promptUser()
             starCount = starCount + count;
           }
 
-          console.log("star count all repositories: " + starCount)
           info.starCount = starCount;
           const html = generateHTML(info);
-
           console.log(`${username}.html converted to PDF`);
           readyToConvert = true;
-
      
           fs.writeFileSync(`${username}.html`, html);              // test HTML file writes to disk and HTML to PDF converter
 
@@ -67,10 +58,8 @@ promptUser()
             if (err) return console.log(err);
               console.log(res);
           });
-
         });
       });
-  
   })
   .catch(function (err) {
       console.log(err);
@@ -124,7 +113,6 @@ const colors = {
     photoBorderColor: "red"
   }
 };
-
 
 function generateHTML(info) {
   return `<!DOCTYPE html>
